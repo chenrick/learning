@@ -18,7 +18,7 @@ describe "StaticPages" do
 
     it "should have the right title 'Story Engine'" do
       	visit '/static_pages/home'
-      	page.should have_selector('title', :text => "Story Engine > | Home")
+      	page.should have_selector('title', :text => "The Story Engine | Home")
       	
     end
   end
