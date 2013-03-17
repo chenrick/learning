@@ -16,9 +16,9 @@ describe "StaticPages" do
 
     end
 
-    it "should have the right title 'Story Engine'" do
+    it "it should not have a custom title 'Story Engine'" do
       	visit '/static_pages/home'
-      	page.should have_selector('title', :text => "The Story Engine | Home")
+      	page.should_not have_selector('title', :text => "| Home")
       	
     end
   end
