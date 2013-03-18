@@ -4,7 +4,9 @@ Storyengine::Application.routes.draw do
   get "static_pages/help"
   get "static_pages/index"
   get "static_pages/about"
-
+  
+  root :to => "static_pages#home.html.erb"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
