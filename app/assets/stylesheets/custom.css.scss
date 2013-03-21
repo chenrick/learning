@@ -1,8 +1,14 @@
 @import "bootstrap";
 
+
+/* Scss Var */
+
+$grayLight: #999;
+$grayMediumLight: #eaeaea;
+$grayDarker: #222000;
+$gray: #777000;
+
 /* universal */
-
-
 html {
   overflow-y: scroll;
 }
@@ -19,12 +25,13 @@ textarea {
   resize: vertical;
 }
 
+/* Sass Updated Syntax */
+
 .center {
   text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
+  h1 {
+    margin-bottom: 10px
+  }
 }
 
 /* typography */
@@ -46,7 +53,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #999;
+  color: $grayLight;
 }
 
 p {
@@ -60,34 +67,35 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #FFF00;
+  color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+  
+  /* Scss version of #logo:hover */
+  &:hover {
+    color: #77700;
+    text-decoration: none; 
+  }
 }
 
-#logo:hover {
-  color: #77700;
-  text-decoration: none;
-}
 
 /* footer */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #999;
-}
-
-footer a {
-  color: #555;
-}  
-
-footer a:hover { 
-  color: #222;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  
+  a {
+    color: $gray;
+    &:hover {
+       color: #222;  
+    }
+  }
 }
 
 footer small {
@@ -97,9 +105,10 @@ footer small {
 footer ul {
   float: right;
   list-style: none;
+  
+  li {
+    float: left;
+    margin-left: 10px;
+  }
 }
 
-footer ul li {
-  float: left;
-  margin-left: 10px;
-}
